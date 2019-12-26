@@ -1,10 +1,7 @@
 package com.yyh.dao;
 
 import com.yyh.po.Student;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -25,5 +22,9 @@ public interface StudentDao {
             @Result(property = "pwd", column = "stuPwd")
     })
     List<Student> selectAll();
+
+
+    @Delete("delete from student where stuid=#{id}")
+    int delete(int id);
 
 }

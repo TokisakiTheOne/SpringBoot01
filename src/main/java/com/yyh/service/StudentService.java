@@ -10,5 +10,5 @@ public interface StudentService {
 
 
     ResultMessage selectAll();
-
+    ResultMessage delete(int id);
 }
