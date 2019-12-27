@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.util.DigestUtils;
 
 /**
  * SpringBoot  测试类
@@ -22,5 +23,10 @@ public class SpringBootApplicationTest {
     @Test
     public void testSelectAll() {
         sd.selectAll().forEach(System.out::println);
+       //  proxy_pass
+        // sudo passwd root
+        // su root
+        //docker images  docker ps   docker ps -a
+
     }
 }
